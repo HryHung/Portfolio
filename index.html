@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hung — Mechatronics & Robotics</title>
+<meta name="description" content="Engineering portfolio — Mechatronics, Robotics, Embedded Systems and Product Development.">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="#top">H<span>.</span></a>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-github" href="https://github.com/HryHung" target="_blank" rel="noopener">GitHub ↗</a>
+</nav>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="dot"></span> MECHATRONICS · ROBOTICS · EMBEDDED</div>
+    <h1>Build.<br><em>Integrate.</em><br>Iterate.</h1>
+    <p>I design and build robotic systems across mechanical engineering, electronics, embedded control and autonomous robotics.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#projects">Explore projects ↓</a>
+      <a class="button ghost" href="https://github.com/HryHung" target="_blank" rel="noopener">View GitHub ↗</a>
+    </div>
+  </div>
+  <div class="hero-terminal">
+    <div class="terminal-top"><i></i><i></i><i></i><span>portfolio.sh</span></div>
+    <div class="terminal-body">
+      <div><b>$</b> whoami</div>
+      <p>Hung / Mechatronics Engineer</p>
+      <div><b>$</b> focus</div>
+      <p>robotics · embedded · systems</p>
+      <div><b>$</b> stack</div>
+      <p>ROS2 · ESP32 · Raspberry Pi</p>
+      <div><b>$</b> projects</div>
+      <p>09 engineering builds</p>
+    </div>
+  </div>
+</section>
+
+<section class="section profile">
+  <div class="section-head">
+    <span class="section-no">01 / PROFILE</span>
+    <span class="section-line"></span>
+  </div>
+  <div class="profile-grid">
+    <h2>Systems,<br>not just parts.</h2>
+    <div>
+      <p class="lead">My work connects mechanical design, electronics, embedded firmware, control and robotics software.</p>
+      <p>From autonomous mobile robots and legged platforms to embedded controllers and hardware products, I like building the complete chain from concept to working prototype.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section projects-section" id="projects">
+  <div class="section-head">
+    <div>
+      <span class="section-no">02 / SELECTED WORK</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="featured">Flagship</button>
+      <button class="filter" data-filter="core">Robotics</button>
+      <button class="filter" data-filter="support">Supporting</button>
+    </div>
+  </div>
+
+  <div class="project-list">
+    
+    <article class="project-card featured" data-priority="featured" data-id="amr">
+      <div class="project-media">
+        <img src="assets/amr/hero.svg" alt="Warehouse AMR Robot">
+        <div class="project-index">01</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Robotics / Autonomous Systems</span><span>2025–2026</span></div>
+        <h3>Warehouse AMR Robot</h3>
+        <p>A prototype indoor warehouse AMR integrating mechanical design, embedded motor control, LiDAR mapping, Nav2 navigation, AprilTag docking, and a web-based mission interface.</p>
+        <div class="tags"><span>ROS 2</span><span>SLAM</span><span>Nav2</span><span>AprilTag</span><span>ESP32</span><span>Raspberry Pi</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card featured" data-priority="featured" data-id="nexcube">
+      <div class="project-media">
+        <img src="assets/nexcube/hero.svg" alt="NEXCUBE">
+        <div class="project-index">02</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Product / Hardware</span><span>2026</span></div>
+        <h3>NEXCUBE</h3>
+        <p>A modular portable electronics laboratory concept for hands-on STEM education and rapid prototyping.</p>
+        <div class="tags"><span>Product Design</span><span>Electronics</span><span>3D Printing</span><span>STEM</span><span>Prototyping</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card core" data-priority="core" data-id="hexapod">
+      <div class="project-media">
+        <img src="assets/hexapod/hero.svg" alt="Hexapod Robot Platform">
+        <div class="project-index">03</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Robotics</span><span>2025–2026</span></div>
+        <h3>Hexapod Robot Platform</h3>
+        <p>A modular six-legged robotics platform for mechanical design, gait generation, inverse kinematics and embedded control experiments.</p>
+        <div class="tags"><span>ESP32</span><span>Kinematics</span><span>MATLAB</span><span>SolidWorks</span><span>Embedded C</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card core" data-priority="core" data-id="mini-agv">
+      <div class="project-media">
+        <img src="assets/mini-agv/hero.svg" alt="Line Following AGV">
+        <div class="project-index">04</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Robotics</span><span>2024–2025</span></div>
+        <h3>Line Following AGV</h3>
+        <p>A line-following mobile robot with color-based sorting and autonomous goods distribution.</p>
+        <div class="tags"><span>Embedded C</span><span>ESP32</span><span>PID</span><span>Sensors</span><span>MATLAB</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card core" data-priority="core" data-id="merc">
+      <div class="project-media">
+        <img src="assets/merc-robot/hero.svg" alt="MERC Robot">
+        <div class="project-index">05</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Robotics / Mechatronics</span><span>—</span></div>
+        <h3>MERC Robot</h3>
+        <p>A robotics platform combining mechanical construction, electronics and motion-control work.</p>
+        <div class="tags"><span>CAD</span><span>Mechanics</span><span>Electronics</span><span>Control</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card support" data-priority="support" data-id="arm">
+      <div class="project-media">
+        <img src="assets/robot-arm/hero.svg" alt="Robot Arm Controller">
+        <div class="project-index">06</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Embedded / Robotics</span><span>—</span></div>
+        <h3>Robot Arm Controller</h3>
+        <p>An embedded controller project for robotic-arm actuation and motion control.</p>
+        <div class="tags"><span>ESP32</span><span>PWM</span><span>Motor Control</span><span>Embedded C</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card support" data-priority="support" data-id="ducky">
+      <div class="project-media">
+        <img src="assets/rubber-ducky/hero.svg" alt="Rubber Ducky — ESP32-S2">
+        <div class="project-index">07</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Embedded Systems</span><span>—</span></div>
+        <h3>Rubber Ducky — ESP32-S2</h3>
+        <p>An ESP32-S2 embedded-systems experiment exploring the platform's USB and microcontroller capabilities.</p>
+        <div class="tags"><span>ESP32-S2</span><span>USB</span><span>Firmware</span><span>C/C++</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card support" data-priority="support" data-id="finger">
+      <div class="project-media">
+        <img src="assets/finger-counter/hero.svg" alt="Hand Gesture App">
+        <div class="project-index">08</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Computer Vision</span><span>2026</span></div>
+        <h3>Hand Gesture App</h3>
+        <p>A computer-vision application using MediaPipe and Streamlit to detect hand gestures, count fingers and implement gesture-based unlocking.</p>
+        <div class="tags"><span>Python</span><span>MediaPipe</span><span>OpenCV</span><span>Streamlit</span></div>
+      </div>
+    </article>
+    
+    <article class="project-card support" data-priority="support" data-id="studyplease">
+      <div class="project-media">
+        <img src="assets/studyplease/hero.svg" alt="StudyPlease">
+        <div class="project-index">09</div>
+        <div class="project-open">OPEN CASE STUDY ↗</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-meta"><span>Software / Browser Extension</span><span>2026</span></div>
+        <h3>StudyPlease</h3>
+        <p>A browser extension that turns restricted websites into short vocabulary checkpoints before allowing browsing.</p>
+        <div class="tags"><span>JavaScript</span><span>Chrome Extension</span><span>UX</span><span>Web</span></div>
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+<section class="section experience" id="experience">
+  <div class="section-head"><span class="section-no">03 / EXPERIENCE</span><span class="section-line"></span></div>
+  <h2>Engineering<br>experience.</h2>
+  <div class="timeline">
+    <div class="timeline-row"><span>2025–2026</span><div><h3>Robotics Mentor</h3><b>Novalab Robotics</b><p>Mentoring robotics builds involving line-following robots, hexapods and 3D-printed FPV platforms.</p></div></div>
+    <div class="timeline-row"><span>2025</span><div><h3>NPD Engineering Intern</h3><b>Milwaukee</b><p>Product development work on the M18 double-battery snow blower platform.</p></div></div>
+    <div class="timeline-row"><span>2024</span><div><h3>Engineering Intern</h3><b>TechnixAM</b><p>Additive manufacturing and 3D-printed camera-lens development.</p></div></div>
+  </div>
+</section>
+
+<section class="section skills" id="skills">
+  <div class="section-head"><span class="section-no">04 / TECHNICAL STACK</span><span class="section-line"></span></div>
+  <h2>Tools I build with.</h2>
+  <div class="skill-grid">
+    <div><small>01</small><h3>Robotics</h3><p>ROS2 · SLAM · Nav2 · Gazebo · Kinematics · Motion Control</p></div>
+    <div><small>02</small><h3>Embedded</h3><p>ESP32 · Raspberry Pi · Sensors · Encoders · PWM · UART / CAN</p></div>
+    <div><small>03</small><h3>Engineering</h3><p>SolidWorks · CAD · 3D Printing · MATLAB · Simulink</p></div>
+    <div><small>04</small><h3>Programming</h3><p>C / C++ · Python · MATLAB · JavaScript · Embedded Firmware</p></div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-box">
+    <span class="section-no">05 / CONTACT</span>
+    <h2>Let's build<br><em>something.</em></h2>
+    <p>Robotics · Mechatronics · Embedded Systems · Product Development</p>
+    <a class="button primary" href="https://github.com/HryHung" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close>×</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<footer><span>© 2026 HryHung</span><span>Mechatronics · Robotics · Engineering</span></footer>
+
+<script>
+const PROJECTS = [{"id": "amr", "num": "01", "title": "Warehouse AMR Robot", "category": "Robotics / Autonomous Systems", "priority": "featured", "year": "2025–2026", "tags": ["ROS 2", "SLAM", "Nav2", "AprilTag", "ESP32", "Raspberry Pi"], "summary": "A prototype indoor warehouse AMR integrating mechanical design, embedded motor control, LiDAR mapping, Nav2 navigation, AprilTag docking, and a web-based mission interface.", "role": "System integration · ROS 2 · Navigation · Embedded control", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "amr", "image": "assets/amr/hero.jpg", "details": [["System", "Raspberry Pi running ROS 2 at the high level; ESP32 / ESP32-C3 handles velocity commands, encoders and motor control."], ["Autonomy", "SLAM Toolbox for mapping, AMCL for localization, Nav2 for waypoint navigation, and AprilTag-based docking correction."], ["Interface", "Flask-based Web UI for map, waypoint and shipping-mission management."], ["Architecture", "Web UI → Raspberry Pi / ROS 2 → ESP32 → motor driver → DC motors + encoders → odometry / localization / navigation."]]}, {"id": "nexcube", "num": "02", "title": "NEXCUBE", "category": "Product / Hardware", "priority": "featured", "year": "2026", "tags": ["Product Design", "Electronics", "3D Printing", "STEM", "Prototyping"], "summary": "A modular portable electronics laboratory concept for hands-on STEM education and rapid prototyping.", "role": "Product concept · Hardware · Mechanical / 3D-printing development", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "nexcube", "image": "assets/nexcube/hero.jpg", "details": [["Problem", "Make electronics experimentation more modular, portable and approachable for students and makers."], ["Product", "A modular physical platform combining electronics experimentation with a portable educational form factor."], ["Engineering", "Mechanical packaging, rapid prototyping and hardware-oriented product development."], ["Status", "Portfolio case study — add your final specifications, prototype results, BOM and validation data in the project README."]]}, {"id": "hexapod", "num": "03", "title": "Hexapod Robot Platform", "category": "Robotics", "priority": "core", "year": "2025–2026", "tags": ["ESP32", "Kinematics", "MATLAB", "SolidWorks", "Embedded C"], "summary": "A modular six-legged robotics platform for mechanical design, gait generation, inverse kinematics and embedded control experiments.", "role": "Mechanical design · Kinematics · Embedded control", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "hexapod", "image": "assets/hexapod/hero.jpg", "details": [["Mechanical", "Six legs with 3 DOF each, modular joint / leg interfaces and a central control architecture."], ["Control", "High-level gait planning feeds inverse kinematics, then servo control and hardware drivers."], ["Hardware", "MCU-based controller, custom / DIY PCB work, modular power distribution and alignment system."], ["Future", "IMU / force feedback, advanced gaits, terrain adaptation and optional ROS integration."]]}, {"id": "mini-agv", "num": "04", "title": "Line Following AGV", "category": "Robotics", "priority": "core", "year": "2024–2025", "tags": ["Embedded C", "ESP32", "PID", "Sensors", "MATLAB"], "summary": "A line-following mobile robot with color-based sorting and autonomous goods distribution.", "role": "Embedded control · PID · Sensors · Mechatronics design", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "mini-agv", "image": "assets/mini-agv/hero.jpg", "details": [["Control", "Weighted IR sensor readings estimate line position and a PID controller corrects the trajectory."], ["Logic", "A state machine handles idle, line following, load detection, color detection, navigation and destination stop."], ["Hardware", "Differential-drive platform, DC motors with encoders, IR array, color sensor, TB6612FNG and ESP32 / STM32."], ["Results", "Target specifications include ≥0.1 m/s speed, ±3 mm tracking error, ±5 mm stopping error and ~1 kg load capacity."]]}, {"id": "merc", "num": "05", "title": "MERC Robot", "category": "Robotics / Mechatronics", "priority": "core", "year": "—", "tags": ["CAD", "Mechanics", "Electronics", "Control"], "summary": "A robotics platform combining mechanical construction, electronics and motion-control work.", "role": "Add your exact role and engineering contribution here.", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "merc-robot", "image": "assets/merc-robot/hero.jpg", "details": [["Problem", "TODO — describe the engineering problem or objective."], ["Design", "TODO — describe the mechanical architecture, actuator selection and CAD work."], ["Control", "TODO — describe firmware, sensors, motor control or autonomy."], ["Result", "TODO — add measured performance, test results or demonstration outcome."]]}, {"id": "arm", "num": "06", "title": "Robot Arm Controller", "category": "Embedded / Robotics", "priority": "support", "year": "—", "tags": ["ESP32", "PWM", "Motor Control", "Embedded C"], "summary": "An embedded controller project for robotic-arm actuation and motion control.", "role": "TODO — add your exact contribution.", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "robot-arm-controller", "image": "assets/robot-arm/hero.jpg", "details": [["Objective", "TODO — explain what the controller was designed to do."], ["Hardware", "TODO — add MCU, motors / servos, drivers, sensors and communication interfaces."], ["Firmware", "TODO — add control architecture, PWM / UART / CAN details and state logic."], ["Result", "TODO — add motion range, accuracy, response time or demo results."]]}, {"id": "ducky", "num": "07", "title": "Rubber Ducky — ESP32-S2", "category": "Embedded Systems", "priority": "support", "year": "—", "tags": ["ESP32-S2", "USB", "Firmware", "C/C++"], "summary": "An ESP32-S2 embedded-systems experiment exploring the platform's USB and microcontroller capabilities.", "role": "TODO — add your exact engineering contribution.", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "rubber-ducky", "image": "assets/rubber-ducky/hero.jpg", "details": [["Objective", "TODO — describe the learning / engineering objective."], ["Platform", "ESP32-S2 and its USB-capable microcontroller features."], ["Implementation", "TODO — describe firmware, USB stack / interfaces and the actual behavior implemented."], ["Result", "TODO — add a screenshot, demo, benchmark or technical takeaway."]]}, {"id": "finger", "num": "08", "title": "Hand Gesture App", "category": "Computer Vision", "priority": "support", "year": "2026", "tags": ["Python", "MediaPipe", "OpenCV", "Streamlit"], "summary": "A computer-vision application using MediaPipe and Streamlit to detect hand gestures, count fingers and implement gesture-based unlocking.", "role": "Computer vision · Python · Interactive application", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "finger-counter", "image": "assets/finger-counter/hero.jpg", "details": [["Vision", "MediaPipe hand landmarks are used to recognize hand posture and count fingers."], ["Application", "Streamlit provides an interactive interface for camera control, gesture recording and gesture unlocking."], ["Features", "Finger counting, hand landmarks, raw feature values and a recorded gesture password."], ["Run", "Python 3.10 environment with MediaPipe, Streamlit, OpenCV and NumPy."]]}, {"id": "studyplease", "num": "09", "title": "StudyPlease", "category": "Software / Browser Extension", "priority": "support", "year": "2026", "tags": ["JavaScript", "Chrome Extension", "UX", "Web"], "summary": "A browser extension that turns restricted websites into short vocabulary checkpoints before allowing browsing.", "role": "Product concept · JavaScript · UX / browser extension", "github": "https://github.com/HryHung", "readme": "README.md", "folder": "studyplease", "image": "assets/studyplease/hero.jpg", "details": [["Concept", "Restricted sites trigger an in-page vocabulary checkpoint rather than simply blocking access."], ["Interaction", "Four-choice quizzes, feedback after incorrect answers, configurable unlock duration and a floating countdown."], ["Personalization", "Users can manage restricted domains and add personal vocabulary."], ["Implementation", "Chrome / Edge unpacked extension using a document-start content script and popup configuration."]]}];
+</script>
+<script src="script.js"></script>
+</body>
+</html>
