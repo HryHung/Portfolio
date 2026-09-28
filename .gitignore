@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.verification/
+
+# Local research documents; the website's downloadable CV is tracked.
+/asset/file/project_doc/
+/*.pdf
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.log

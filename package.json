@@ -1,0 +1,8 @@
+{
+  "name": "le-huy-hung-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "generate": "node scripts/generate.mjs", "dev": "npm run generate && vite --host 127.0.0.1", "build": "npm run generate && vite build", "preview": "vite preview --host 127.0.0.1" },
+  "devDependencies": { "vite": "^6.3.0" }
+}
