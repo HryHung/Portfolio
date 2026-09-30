@@ -24,6 +24,10 @@ The build outputs to `dist/`. Every page is a real `.html` file, supporting dire
 
 ## Edit content and appearance
 
+- `src/home.js` and `src/home-cinema.css`: darkened wallpaper Home, centered CV action, and full-viewport download presentation.
+- `src/cv-download.js`: click → 2.2-second energy focus → supplied 8.85-second video → 1.4-second CV icon reveal/fade → PDF download. Video plays with sound after the click. If the browser blocks delayed audible playback, a Play with sound button provides a direct user gesture. Skip downloads immediately; Close/Escape cancels. Reduced motion and JavaScript-disabled visitors use the native download link. Playback failure or a 20-second stall timeout proceeds to the CV reveal and download. Video fills the screen with cover framing (edges may crop on different aspect ratios). The download click requests browser fullscreen, falling back to the full viewport when unsupported or denied; completion or cancellation exits fullscreen only if the sequence entered it.
+- `asset/file/animation_cv_download.mp4`: supplied clip, preserved unchanged; Vite packages it into the production build. It is not preloaded on page entry.
+
 - `src/content.js`: project identity, exact hero asset names, three design specifications, tools, and results-image references.
 - `src/case-studies.js`: source-reviewed abstracts, engineering sections, supporting images, process diagrams, achievements, and evidence limits.
 - `src/profile.js`: CV-grounded education, exact positions/dates, responsibility bullets, and requested skill groups.
@@ -56,6 +60,7 @@ With the production preview running:
 
 ```sh
 python scripts/verify.py http://127.0.0.1:4173
+node scripts/test-cv-download.mjs
 ```
 
 This checks all nine built pages over HTTP, Previous/Next order including wraparound, current-page markers, metadata, exactly three specifications and two to four engineering sections per project, About positions/dates, image dimensions, and local resource references. The downloaded CV must have the PDF content type and match the original file byte-for-byte by SHA-256. It does not substitute for visual browser testing.

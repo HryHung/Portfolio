@@ -56,7 +56,8 @@ for i, slug in enumerate(PAGES):
         assert any(t == 'a' and a.get('href') == './' + destination + '.html' for t, a in page.tags), (name, destination)
     for t, a in page.tags:
         if t == 'img' and a.get('src'):
-            assert a.get('alt') and a.get('width') and a.get('height'), (name, a)
+            decorative = 'home-backdrop' in a.get('class', '') and a.get('alt') == ''
+            assert (a.get('alt') or decorative) and a.get('width') and a.get('height'), (name, a)
         for key in ['src', 'href']:
             value = a.get(key, '')
             if not value or value.startswith(('http', '#', 'tel:', 'mailto:')):

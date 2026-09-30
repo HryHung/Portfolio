@@ -1,3 +1,5 @@
+import { setupCVDownload } from './cv-download.js';
+setupCVDownload();
 const toggle = document.querySelector('.menu-toggle');
 const links = document.querySelector('#nav-links');
 function closeMenu() { toggle.setAttribute('aria-expanded', 'false'); links.classList.remove('is-open'); }
@@ -29,7 +31,7 @@ viewer.addEventListener('cancel', event => { event.preventDefault(); closeViewer
 viewer.addEventListener('click', event => { if (event.target === viewer) closeViewer(); });
 viewer.addEventListener('close', () => { clearTimeout(closingTimer); viewer.classList.remove('is-closing'); document.body.classList.remove('viewer-open'); opener?.focus(); });
 document.addEventListener('keydown', event => {
-  if (viewer.open) return;
+  if (viewer.open || document.querySelector('.cv-cinema[open]')) return;
   if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); return; }
   if (toggle.getAttribute('aria-expanded') === 'true' || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.target.closest('input,textarea,select,button,[contenteditable="true"]')) return;
   if (matchMedia('(min-width: 1100px)').matches && ['ArrowLeft', 'ArrowRight'].includes(event.key)) {
