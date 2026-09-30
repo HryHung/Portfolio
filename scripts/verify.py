@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from html import unescape
 from pathlib import Path
 from urllib.request import urlopen
+from urllib.parse import urlsplit
 from hashlib import sha256
 import sys
 
@@ -62,7 +63,7 @@ for i, slug in enumerate(PAGES):
             value = a.get(key, '')
             if not value or value.startswith(('http', '#', 'tel:', 'mailto:')):
                 continue
-            file = ROOT / 'dist' / value.lstrip('./')
+            file = ROOT / 'dist' / urlsplit(value).path.lstrip('./')
             assert file.is_file(), (name, value)
             assets.add('/' + value.lstrip('./'))
     with urlopen(base + '/' + name) as response:
