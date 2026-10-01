@@ -2,6 +2,10 @@
 
 Nine complete static HTML pages, built with Vite, semantic HTML, shared CSS, and small JavaScript enhancements. All content renders without JavaScript; JavaScript adds the mobile menu and native-dialog image viewer. No deployment is configured or performed.
 
+https://cloud.umami.is/analytics/us/websites/8aa6e6ed-ad84-46bc-8dea-6791fdc8b4e9
+
+https://hryhung.github.io/Portfolio/
+
 ## Run locally
 
 Private visit, project engagement, and CV event tracking is configured with your Umami Website ID in `src/analytics-config.js`. Tracking runs on `hryhung.github.io/Portfolio/` after deployment; local previews are excluded. See [ANALYTICS.md](ANALYTICS.md) for private dashboard setup, CSV exports, event meanings, and GitHub Pages deployment.
