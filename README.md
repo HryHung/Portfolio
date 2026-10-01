@@ -36,7 +36,7 @@ The build outputs to `dist/`. Every page is a real `.html` file, supporting dire
 - `src/style.css`: centered 1180px layout, compact two-column openings, reusable image treatments, sticky navigation, tool pills, and reduced-motion behavior.
 - `src/main.js`: accessible mobile disclosure menu, image dialog with animated close/Escape/focus restoration, once-only section reveals, and optional desktop arrow navigation.
 - `asset/`: original supplied images, preserved with their filenames and extensions. Image paths are relative and Vite includes referenced assets in the build.
-- `favicon.svg`: red, black, and white mark.
+- `favicon2.svg`: red, black, and white mark.
 
 Manrope and IBM Plex Mono are loaded from Google Fonts with local fallbacks when offline. Images use contain framing, intrinsic dimensions, and lazy loading below the opening.
 
