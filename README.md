@@ -4,6 +4,8 @@ Nine complete static HTML pages, built with Vite, semantic HTML, shared CSS, and
 
 ## Run locally
 
+Private visit, project engagement, and CV event tracking is configured with your Umami Website ID in `src/analytics-config.js`. Tracking runs on `hryhung.github.io/Portfolio/` after deployment; local previews are excluded. See [ANALYTICS.md](ANALYTICS.md) for private dashboard setup, CSV exports, event meanings, and GitHub Pages deployment.
+
 Requires Node.js 18+ (Node.js 22 recommended) and npm.
 
 ```sh

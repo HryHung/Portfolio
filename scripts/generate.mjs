@@ -6,7 +6,7 @@ import { caseStudies } from '../src/case-studies.js';
 import { education, experience, skills } from '../src/profile.js';
 import { icon } from '../src/icons.js';
 const projects = baseProjects.map(p => ({ ...p, ...caseStudies[p.slug] }));
-const assetVersion = createHash('sha256').update(['src/style.css', 'src/home-cinema.css', 'src/main.js', 'src/cv-download.js'].map(p => readFileSync(p, 'utf8')).join('\n')).digest('hex').slice(0, 12);
+const assetVersion = createHash('sha256').update(['src/style.css', 'src/home-cinema.css', 'src/main.js', 'src/cv-download.js', 'src/analytics.js', 'src/analytics-config.js'].map(p => readFileSync(p, 'utf8')).join('\n')).digest('hex').slice(0, 12);
 const pages = [{slug:'index',nav:'Home',title:'Le Huy Hung'}, {slug:'about',nav:'About Me',title:'About Me'}, ...projects];
 const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 function dimensions(path) {

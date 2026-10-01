@@ -1,5 +1,7 @@
 import { setupCVDownload } from './cv-download.js';
-setupCVDownload();
+import { setupAnalytics, trackEvent } from './analytics.js';
+setupAnalytics();
+setupCVDownload(trackEvent);
 const toggle = document.querySelector('.menu-toggle');
 const links = document.querySelector('#nav-links');
 function closeMenu() { toggle.setAttribute('aria-expanded', 'false'); links.classList.remove('is-open'); }

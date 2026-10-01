@@ -25,7 +25,7 @@ export function home() {
     <video class="cv-video" src="./asset/file/animation_cv_download.mp4" preload="none" playsinline aria-label="Genshin Impact CV introduction"></video>
     <button type="button" class="cinema-play" hidden>▶ Play with sound</button>
     <div class="cv-reveal" aria-hidden="true"><div class="cv-document">${icon('download')}<strong>CV</strong></div><p>Le Huy Hung</p></div>
-    <div class="cinema-controls"><button type="button" class="cinema-skip">Skip &amp; download</button><button type="button" class="cinema-cancel" aria-label="Cancel download animation">Close ×</button></div>
+    <div class="cinema-controls"><button type="button" class="cinema-skip" aria-label="Skip animation and download CV">Skip</button><button type="button" class="cinema-cancel" aria-label="Cancel download animation">Close ×</button></div>
     <p class="cinema-status" role="status" aria-live="polite">Preparing your CV…</p>
   </dialog>`;
 }

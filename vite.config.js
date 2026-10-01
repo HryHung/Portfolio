@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
 const pages = ['index', 'about', 'amr', 'nexcube', 'hexapod', 'mini-agv', 'printed-lens', 'merc', 'hand-gesture'];
 export default defineConfig({
+  base: './', // Keep built assets working under GitHub Pages /Portfolio/.
   plugins: [{
     name: 'include-original-cv',
     generateBundle() {

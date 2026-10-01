@@ -1,8 +1,17 @@
 // User-initiated only. A native link remains usable without JavaScript.
-export function setupCVDownload() {
+export function setupCVDownload(track = () => {}) {
   const trigger = document.querySelector('.cv-trigger');
   const dialog = document.querySelector('.cv-cinema');
-  if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+  if (!trigger) return;
+  // A failed/blocked analytics service must never break the download.
+  const report = (name, data = {}) => { try { track(name, data); } catch {} };
+  if (!dialog || typeof dialog.showModal !== 'function') {
+    trigger.addEventListener('click', () => {
+      report('cv_click');
+      report('cv_download_requested', { method: 'native' });
+    });
+    return;
+  }
   const video = dialog.querySelector('video');
   const status = dialog.querySelector('.cinema-status');
   const playButton = dialog.querySelector('.cinema-play');
@@ -32,6 +41,7 @@ export function setupCVDownload() {
   };
   const clearTimers = () => { timers.forEach(clearTimeout); timers.clear(); };
   function cleanup() {
+    if (phase !== 'idle' && !downloaded) report('cv_cancelled', { phase });
     clearTimers();
     exitFullscreen();
     playButton.hidden = true;
@@ -43,13 +53,14 @@ export function setupCVDownload() {
     trigger.removeAttribute('aria-busy');
     trigger.focus({ preventScroll: true });
   }
-  function download() {
+  function download(method = 'animation') {
     if (downloaded || phase === 'idle') return;
     downloaded = true;
     const link = document.createElement('a');
     link.href = trigger.href;
     link.download = trigger.download;
     document.body.append(link);
+    report('cv_download_requested', { method });
     link.click();
     link.remove();
     dialog.close();
@@ -62,7 +73,7 @@ export function setupCVDownload() {
     phase = 'reveal';
     dialog.dataset.phase = phase;
     status.textContent = 'Your CV is ready. Starting download…';
-    later(download, reduce.matches ? 0 : 1400);
+    later(() => download(), reduce.matches ? 0 : 1400);
   }
   function playVideo() {
     if (phase !== 'focus') return;
@@ -89,10 +100,15 @@ export function setupCVDownload() {
   }
   playButton.addEventListener('click', () => { requestFullscreen(); playWithSound(); });
   trigger.addEventListener('click', event => {
-    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
-    if (reduce.matches) return; // Native, immediate download without motion.
+    if (event.button !== 0) return;
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || reduce.matches) {
+      report('cv_click');
+      report('cv_download_requested', { method: 'native' });
+      return; // Native download without the animation.
+    }
     event.preventDefault();
     if (phase !== 'idle') return;
+    report('cv_click');
     closeOpenMenu();
     downloaded = false;
     const rect = trigger.getBoundingClientRect();
@@ -114,10 +130,10 @@ export function setupCVDownload() {
   }
   video.addEventListener('ended', reveal);
   video.addEventListener('error', () => { if (phase !== 'idle') reveal(); });
-  dialog.querySelector('.cinema-skip').addEventListener('click', download);
+  dialog.querySelector('.cinema-skip').addEventListener('click', () => download('skip'));
   dialog.querySelector('.cinema-cancel').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', cleanup);
   dialog.addEventListener('cancel', () => { clearTimers(); video.pause(); });
-  reduce.addEventListener('change', () => { if (reduce.matches && phase !== 'idle') download(); });
+  reduce.addEventListener('change', () => { if (reduce.matches && phase !== 'idle') download('reduced_motion'); });
   window.addEventListener('pagehide', () => { if (dialog.open) dialog.close(); });
 }
